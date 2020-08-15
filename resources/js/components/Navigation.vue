@@ -32,9 +32,14 @@
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-              Note
-            </a>
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >Note</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <router-link class="dropdown-item" :to="{name:'notes.create' }">New Note</router-link>
@@ -55,9 +60,5 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    console.log("Component mounted.");
-  },
-};
+export default {};
 </script>

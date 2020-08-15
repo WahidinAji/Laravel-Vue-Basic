@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::prefix('notes')->namespace('Notes')->group(function () {
-    Route::post('create-new-note', 'NoteController@store');
+Route::namespace('Notes')->group(function () {
+    Route::prefix('notes')->group(function () {
+        Route::post('create-new-note', 'NoteController@store');
+    });
+    Route::prefix('subjects')->group(function () {
+        Route::get('', 'SubjectController@index');
+    });
 });
